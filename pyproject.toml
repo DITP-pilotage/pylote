@@ -1,0 +1,15 @@
+[project]
+name = "pylote"
+requires-python = ">=3.11"
+dynamic = ["dependencies", "version"]
+
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.in"] }
+
+[tool.setuptools_scm]
+version_file = "pylote/_version.py"
