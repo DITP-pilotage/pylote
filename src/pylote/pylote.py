@@ -2,7 +2,7 @@ from urllib.parse import urljoin
 
 import requests
 
-class Pilote:
+class Pylote:
 
     def __init__(self, base_url, api_key) -> None:
         self.base_url = base_url

@@ -1,6 +1,6 @@
 [project]
 name = "pylote"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
   { name = "Colin Dugeai", email = "colin.dugeai@modernisation.gouv.fr" },
 ]
@@ -24,6 +24,3 @@ dependencies = { file = ["requirements.in"] }
 
 [tool.setuptools]
 packages = ["pylote"]
-
-[tool.setuptools_scm]
-version_file = "pylote/_version.py"
