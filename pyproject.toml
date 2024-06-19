@@ -2,7 +2,7 @@
 name = "pylote"
 version = "0.0.3"
 authors = [
-  { name="Colin Dugeai", email="colin.dugeai@modernisation.gouv.fr" },
+  { name = "Colin Dugeai", email = "colin.dugeai@modernisation.gouv.fr" },
 ]
 description = "Client Python pour interagir avec l'API Pilote (DITP)."
 readme = "README.md"
@@ -22,3 +22,5 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements.in"] }
 
+[tool.setuptools]
+packages = ["pylote"]
