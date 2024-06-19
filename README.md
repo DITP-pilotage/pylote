@@ -8,7 +8,7 @@ Installer les dépendences dans un environnement virtuel avec `pip install .`.
 
 ## Exemples
 
-Vous pouvez installer l’exemple après avoir installé les dépendences avec `pip install .[example]` avec `python example/main.py`
+Pour lancer les exemples, voir [examples/README.md].
 
 ## Mettre à jour les dépendences
 
@@ -16,12 +16,10 @@ Après avoir installé les dépendences de développement vous pouvez upgrader l
 
 ```bash
 pip-compile --upgrade requirements.in
-pip-compile --upgrade example-requirements.in
 ```
 
 Puis les mettre à jour avec
 
 ```bash
 pip-compile requirements.in
-pip-compile example-requirements.in
 ```
