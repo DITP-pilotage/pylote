@@ -35,10 +35,11 @@ class Pylote:
             headers={**self.headers, **{"Content-Type": "application/json"}}
         ).json()
 
-    def import_donnees_indicateur_file(self, chantier_id, indicateur_id, filename, filepath, is_excel=False):
+    def import_donnees_indicateur_file(self, chantier_id, indicateur_id, filepath, is_excel=False):
 
         # Default type is CSV, otherwise Excel
         filetype = "application/vnd.ms-excel" if is_excel else "application/csv"
+        filename = "import.xls" if is_excel else "import.csv"
 
         return requests\
         .post(

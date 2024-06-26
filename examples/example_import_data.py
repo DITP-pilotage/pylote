@@ -18,5 +18,5 @@ print(import_json_result)
 
 # Test import csv file
 FILEPATH_IMPORT="./data-ind208-import-sample.csv"
-import_file_result = pylote_dev.import_donnees_indicateur_file("CH-047", "IND-208", "import.csv", FILEPATH_IMPORT, is_excel=False)
+import_file_result = pylote_dev.import_donnees_indicateur_file("CH-047", "IND-208", FILEPATH_IMPORT, is_excel=False)
 print(import_file_result)
