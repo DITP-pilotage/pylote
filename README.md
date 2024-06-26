@@ -34,7 +34,7 @@ pylote_dev.import_donnees_indicateur_file("CH-047", "IND-208", "./data-ind208-im
 
 ## Exemples
 
-Pour lancer les exemples, voir [examples/README.md].
+Pour lancer les exemples, voir [examples/README.md](./examples/README.md).
 
 ## Mettre à jour les dépendences
 
