@@ -13,13 +13,24 @@ class Pylote:
     def headers(self):
         return {"Authorization": f"Bearer {self.api_key}"}
 
-    def get_donnees_indicateur(self, chantier_id, indicateur_id):
-        endpoint_url="/".join(["chantier", chantier_id, "indicateur", indicateur_id, "donnees"])
+    def build_url(self, chantier_id_, indicateur_id_):
+        endpoint_url="/".join(["chantier", chantier_id_, "indicateur", indicateur_id_, "donnees"])
         full_url = urljoin(self.base_url, endpoint_url)
+        return full_url
 
-        res = requests.get(
-            full_url,
+    def get_donnees_indicateur(self, chantier_id, indicateur_id):
+        
+        return requests\
+        .get(
+            self.build_url(chantier_id, indicateur_id),
             headers=self.headers
         ).json()
 
-        return res
+    def import_donnees_indicateur_array(self, chantier_id, indicateur_id, donnees_array):
+
+        return requests\
+        .post(
+            self.build_url(chantier_id, indicateur_id),
+            json={"donnees": donnees_array},
+            headers=self.headers
+        ).json()
