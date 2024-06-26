@@ -4,7 +4,7 @@ from os import environ
 
 load_dotenv()
 
-pylote_dev = Pylote(environ.get("BASE_URL"), environ.get("API_KEY"))
+pylote_dev = Pylote(environ.get("BASE_URL_DEV"), environ.get("API_KEY_DEV"))
 
 
 donnees_208 = pylote_dev.get_donnees_indicateur("CH-047", "IND-208")
