@@ -32,5 +32,17 @@ class Pylote:
         .post(
             self.build_url(chantier_id, indicateur_id),
             json={"donnees": donnees_array},
-            headers=self.headers
+            headers={**self.headers, **{"Content-Type": "application/json"}}
+        ).json()
+
+    def import_donnees_indicateur_file(self, chantier_id, indicateur_id, filename, filepath, is_excel=False):
+
+        # Default type is CSV, otherwise Excel
+        filetype = "application/vnd.ms-excel" if is_excel else "application/csv"
+
+        return requests\
+        .post(
+            self.build_url(chantier_id, indicateur_id),
+            headers={**self.headers, **{"Content-Type": "multipart/form-data"}},
+            files= {'file': (filename, open(filepath, 'rb'), filetype, {'Expires': '0'})}
         ).json()
