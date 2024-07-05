@@ -34,18 +34,4 @@ pylote_dev.import_donnees_indicateur_file("CH-047", "IND-208", "./data-ind208-im
 
 ## Exemples
 
-Pour lancer les exemples, voir [examples/README.md](./examples/README.md).
-
-## Mettre à jour les dépendences
-
-Après avoir installé les dépendences de développement vous pouvez upgrader les mises à jour avec
-
-```bash
-pip-compile --upgrade requirements.in
-```
-
-Puis les mettre à jour avec
-
-```bash
-pip-compile requirements.in
-```
+Des fichiers d'exemple fonctionnels sont mis à disposition dans le dossier [examples](./examples). Plus de détails dans README correspondant [examples/README.md](./examples/README.md).
