@@ -1,12 +1,12 @@
 [project]
 name = "pylote"
-version = "0.0.4"
+version = "1.0.0"
 authors = [
   { name = "Colin Dugeai", email = "colin.dugeai@modernisation.gouv.fr" },
 ]
 description = "Client Python pour interagir avec l'API Pilote (DITP)."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.8"
 dynamic = ["dependencies"]
 
 [project.urls]
