@@ -44,6 +44,6 @@ class Pylote:
         return requests\
         .post(
             self.build_url(chantier_id, indicateur_id),
-            headers={**self.headers, **{"Content-Type": "multipart/form-data"}},
+            headers=self.headers,
             files= {'file': (filename, open(filepath, 'rb'), filetype, {'Expires': '0'})}
         ).json()
